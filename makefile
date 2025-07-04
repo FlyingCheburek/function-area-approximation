@@ -15,8 +15,7 @@ program: target/*.o
 
 target/*.o:
 	g++ -c src/main/main.cpp
-	#g++ -c src/main/binary_search_tree/*.hpp
-	#mv src/main/binary_search_tree/*.hpp.gch target/
+	g++ -c src/main/approximation-rules/*.cpp
 	mv *.o target/
 
 no-bin:
