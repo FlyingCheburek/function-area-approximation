@@ -8,32 +8,15 @@ const double PI = std::acos(-1.0);
 
 int main() {  
     try {
-        std::cout << RiemannsSum::left_sum
+        std::cout << TrapezoidalRule::sum
         (
             std::make_pair(0.0, 3.0), 
-            4,
+            5,
             [](const double x) -> double { return x*x+1; }  
         ) 
-        << std::endl; 
-
-        std::cout << RiemannsSum::right_sum
-        (
-            std::make_pair(0.0, 3.0), 
-            4,
-            [](const double x) -> double { return x*x+1; }  
-        ) 
-        << std::endl; 
-
-        std::cout << RiemannsSum::average_sum
-        (
-            std::make_pair(0.0, 3.0), 
-            4,
-            [](const double x) -> double { return x*x+1; }  
-        ) 
-        << std::endl; 
-
+        << std::endl;
     } catch (std::exception err) {
         std::cerr << "Error: " << err.what() << "\n";
     }
-    return 0;
+    return 0; 
 }
