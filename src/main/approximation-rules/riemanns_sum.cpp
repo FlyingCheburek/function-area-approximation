@@ -1,6 +1,6 @@
 #include "riemanns_sum.hpp"
 
-double RiemannsSum::left_sum(const std::pair<double, double> interval, const int64_t n, std::function<double(const double)> func) noexcept {
+double RiemannsSum::left_sum(const std::pair<double, double> interval, const int64_t n, std::function<double(const double)> func) {
     if (n <= 0) 
         throw std::invalid_argument("The number of rectangles (n) should be positive.");
     if (interval.first >= interval.second) 
@@ -12,7 +12,7 @@ double RiemannsSum::left_sum(const std::pair<double, double> interval, const int
     return sum;
 }
 
-double RiemannsSum::right_sum(const std::pair<double, double> interval, const int64_t n, std::function<double(const double)> func) noexcept {
+double RiemannsSum::right_sum(const std::pair<double, double> interval, const int64_t n, std::function<double(const double)> func) {
     if (n <= 0) 
         throw std::invalid_argument("The number of rectangles (n) should be positive.");
     if (interval.first >= interval.second) 
@@ -24,7 +24,7 @@ double RiemannsSum::right_sum(const std::pair<double, double> interval, const in
     return sum;
 }
 
-double RiemannsSum::average_sum(const std::pair<double, double> interval, const int64_t n, std::function<double(const double)> func) noexcept {
+double RiemannsSum::average_sum(const std::pair<double, double> interval, const int64_t n, std::function<double(const double)> func) {
     if (n <= 0) 
         throw std::invalid_argument("The number of rectangles (n) should be positive.");
     if (interval.first >= interval.second) 

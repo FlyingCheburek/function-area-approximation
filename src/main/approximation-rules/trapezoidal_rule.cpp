@@ -1,6 +1,6 @@
 #include "trapezoidal_rule.hpp"
 
-double TrapezoidalRule::sum(const std::pair<double, double> interval, const int64_t n, std::function<double(const double)> func) noexcept {
+double TrapezoidalRule::sum(const std::pair<double, double> interval, const int64_t n, std::function<double(const double)> func) {
     if (n <= 0) 
         throw std::invalid_argument("The number of rectangles (n) should be positive.");
     if (interval.first >= interval.second) 
